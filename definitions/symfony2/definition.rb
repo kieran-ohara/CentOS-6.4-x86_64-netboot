@@ -34,7 +34,8 @@ Veewee::Session.declare({
     #"kvm.sh",
     #"vmfusion.sh",
     "cleanup.sh",
-    "zerodisk.sh"
+    "zerodisk.sh",
+    "desktop.sh"
   ],
   :postinstall_timeout => 10000
 })
