@@ -1,0 +1,1 @@
+mysqldump -h localhost -u root -c --add-drop-table --add-locks --quick --lock-tables --all-databases > mysql-dump.sql

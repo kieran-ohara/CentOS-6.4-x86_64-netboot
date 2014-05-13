@@ -2,3 +2,4 @@
 iso/*
 .vagrant
 *.box
+puppet-lamp/mysql-dump.sql
