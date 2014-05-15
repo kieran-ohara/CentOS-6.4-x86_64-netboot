@@ -1,0 +1,35 @@
+class { 'apache':
+	default_mods        => false,
+	default_confd_files => false,
+}
+apache::vhost { 'puppet-lamp.dev':
+      port    => '80',
+      docroot => '/var/www/',
+}
+class { '::mysql::server': }
+mysql::db { 'database':
+  user     => 'kieran',
+  password => 'password',
+  host     => 'localhost',
+  sql      => '/vagrant_data/puppet-lamp/mysql-dump.sql',
+}
+
+class { 'php': }
+
+file { '/root/Desktop':
+   ensure => 'link',
+   target => '/etc/httpd',
+}
+
+resources { "firewall":
+  purge => true
+}
+
+Firewall {
+  before  => Class['my_fw::post'],
+  require => Class['my_fw::pre'],
+}
+
+class { ['my_fw::pre', 'my_fw::post']: }
+
+class { 'firewall': }
