@@ -2,5 +2,6 @@
 iso/*
 .vagrant
 *.box
+puppet-lamp/mysql-dump
 puppet-lamp/mysql-dump.sql
 puppet-lamp/manifests/site.pp
