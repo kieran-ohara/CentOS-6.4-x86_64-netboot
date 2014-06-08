@@ -5,8 +5,8 @@ Veewee::Session.declare({
   :disk_format => 'VDI',
   :hostiocache => 'off',
   :os_type_id => 'RedHat6_64',
-  :iso_src => "http://mirror.nsc.liu.se/centos-store/6.4/isos/x86_64/CentOS-6.4-x86_64-netinstall.iso",
   :iso_file => "CentOS-6.4-x86_64-netinstall.iso",
+  :iso_src => "http://mirrors.usc.edu/pub/linux/distributions/centos/6.4/isos/x86_64/CentOS-6.4-x86_64-netinstall.iso",
   :iso_md5 => "bb9af2aea1344597e11070abe6b1fcd3",
   :iso_download_timeout => 1000,
   :boot_wait => "15",
@@ -26,18 +26,19 @@ Veewee::Session.declare({
   :shutdown_cmd => "/sbin/halt -h -p",
   :postinstall_files => [
     "base.sh",
-    #"ruby.sh",
+    "ruby.sh",
     #"chef.sh",
     "puppet.sh",
     "vagrant.sh",
     "virtualbox.sh",
-    #"kvm.sh",
     #"vmfusion.sh",
     "cleanup.sh",
     "zerodisk.sh",
-    #"nfs.sh",
-    "tmux.sh",
-    "desktop.sh"
+    "nfs.sh",
+    "desktop.sh",
+    "vim.sh",
+    "git.sh",
+    "tmux.sh"
   ],
   :postinstall_timeout => 10000
 })
