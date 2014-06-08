@@ -21,9 +21,9 @@ file { '/root/Desktop':
    target => '/etc/httpd',
 }
 
-resources { "firewall":
-  purge => true
-}
+#resources { "firewall":
+#  purge => true
+#}
 
 Firewall {
   before  => Class['my_fw::post'],
