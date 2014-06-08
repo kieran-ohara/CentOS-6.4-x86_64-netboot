@@ -44,7 +44,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # the file default.pp in the manifests_path directory.
   config.vm.provision "puppet" do |puppet|
     puppet.manifest_file  = "site.pp"
-    puppet.manifests_path = "/Users/kieran/Unfriended/boxes/puppet-lamp/manifests"
-    puppet.module_path = "/Users/kieran/Unfriended/boxes/puppet-lamp/modules"
+    puppet.manifests_path = "manifests"
+    puppet.module_path = "modules"
   end
 end
