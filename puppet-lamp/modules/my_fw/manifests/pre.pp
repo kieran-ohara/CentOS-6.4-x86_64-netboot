@@ -18,4 +18,9 @@ class my_fw::pre {
     ctstate => ['RELATED', 'ESTABLISHED'],
     action  => 'accept',
   }
+  firewall { '003 allow http / https access':
+    proto   => 'tcp',
+    action  => 'accept',
+    port => [80, 443]
+  }
 }
