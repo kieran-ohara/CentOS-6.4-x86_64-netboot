@@ -1,0 +1,5 @@
+---
+# Variables listed here are applicable to all host 
+httpd_port: 80
+ntpserver: 0.europe.pool.ntp.org
+repository: https://github.com/symfony/symfony-standard/

@@ -1,0 +1,14 @@
+---
+- name: Apply common config to all nodes
+  hosts: all
+  sudo: yes
+
+  roles:
+    - common
+
+- name: configure and deploy the webservers and application code
+  hosts: webservers
+  sudo: yes
+
+  roles:
+    - web
