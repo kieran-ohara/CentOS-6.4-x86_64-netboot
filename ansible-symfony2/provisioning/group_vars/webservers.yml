@@ -1,0 +1,3 @@
+---
+apache_vhosts:
+  - {servername: "syfony2.dev", documentroot: "/var/www/html/web"}

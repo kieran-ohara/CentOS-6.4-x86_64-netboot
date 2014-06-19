@@ -7,9 +7,13 @@
    - httpd
    - php
    - php-mysql
+   - php-xml
    - git
    - libsemanage-python
    - libselinux-python
+
+- name: Set date/time inside php.ini
+  lineinfile: dest=/etc/php.ini state=present regexp="^;date.timezone =" insertafter="^;date.timezone =" line="date.timezone = 'Europe/London'"
 
 - name: insert iptables rule for httpd
   lineinfile: dest=/etc/sysconfig/iptables create=yes state=present regexp="{{ httpd_port }}" insertafter="^:OUTPUT "

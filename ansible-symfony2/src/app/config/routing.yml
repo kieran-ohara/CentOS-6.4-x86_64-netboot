@@ -1,0 +1,4 @@
+kb_test:
+    resource: "@KBTestBundle/Resources/config/routing.yml"
+    prefix:   /
+

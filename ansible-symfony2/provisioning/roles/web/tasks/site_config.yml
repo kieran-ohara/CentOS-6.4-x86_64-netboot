@@ -1,0 +1,4 @@
+---
+- name: Copy virtual hosts
+  template: src=vhosts.conf.j2 dest=/etc/httpd/conf.d/vhosts.conf
+  notify: restart httpd
