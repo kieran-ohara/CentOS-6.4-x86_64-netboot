@@ -7,4 +7,4 @@ Installed software:
  - tmux
  - x11 window system
  - vim
- - nfs
+ - NFS
