@@ -34,11 +34,11 @@ Veewee::Session.declare({
     #"vmfusion.sh",
     "cleanup.sh",
     "zerodisk.sh",
-    "nfs.sh",
     "desktop.sh",
     "vim.sh",
     "git.sh",
-    "tmux.sh"
+    "tmux.sh",
+    "nfs.sh"
   ],
   :postinstall_timeout => 10000
 })
