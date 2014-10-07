@@ -8,3 +8,5 @@ Installed software:
  - x11 window system
  - vim
  - NFS
+
+Baked and hosted at https://s3-eu-west-1.amazonaws.com/kieran-bamforth/vagrant-boxes/CentOS-6.4-x86_64-netboot.box.
